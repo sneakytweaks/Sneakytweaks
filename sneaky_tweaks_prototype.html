@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080808">
+<title>Sneaky Tweaks</title>
+<style>
+:root{color-scheme:dark;--bg:#080808;--panel:#141414;--panel2:#1b1b1b;--line:#303030;--muted:#a4a4a4;--white:#f5f5f5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{position:sticky;top:0;z-index:5;background:#090909ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:14px 16px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:1.4px}.logo{width:36px;height:36px;border:1px solid #fff;border-radius:50%;display:grid;place-items:center;font-size:21px}
+nav{display:flex;gap:8px;overflow:auto;padding:12px 14px;border-bottom:1px solid var(--line);scrollbar-width:none}nav button{flex:0 0 auto;background:#151515;color:#ccc;border:1px solid #333;border-radius:999px;padding:9px 14px;font-weight:650}nav button.active{background:#fff;color:#080808;border-color:#fff}
+main{max-width:850px;margin:auto;padding:18px 15px 60px}.hero{padding:22px 18px;border:1px solid #383838;border-radius:20px;background:linear-gradient(145deg,#1b1b1b,#0c0c0c);margin-bottom:16px}
+.eyebrow{color:#aaa;text-transform:uppercase;font-size:11px;letter-spacing:1.6px;font-weight:800}h1{font-size:29px;line-height:1.1;margin:7px 0 9px}h2{font-size:21px;margin:0 0 12px}h3{font-size:15px;margin:0 0 7px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:15px;margin:10px 0}.stat{font-size:24px;font-weight:850}.small{font-size:12px;color:var(--muted)}
+button,.btn{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid white;outline-offset:2px}
+label{display:block;color:#ccc;font-size:13px;margin:12px 0 5px}input,select{width:100%;background:#090909;color:white;border:1px solid #3a3a3a;border-radius:10px;padding:11px;font:inherit}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.action{background:white;color:#080808;border:0;border-radius:10px;padding:11px 15px;font-weight:800;margin-top:12px}.secondary{background:#222;color:white;border:1px solid #444;border-radius:10px;padding:10px 13px;font-weight:700}
+.notice{border-left:3px solid #ddd;padding:10px 12px;background:#171717;border-radius:0 10px 10px 0;color:#c9c9c9;font-size:13px}
+.page{display:none}.page.active{display:block}.pill{display:inline-block;border:1px solid #444;border-radius:99px;padding:3px 9px;font-size:11px;color:#ddd}
+ul{padding-left:19px;color:#ccc}li{margin:7px 0}.range{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #292929;padding:9px 0}.range strong{font-variant-numeric:tabular-nums}
+footer{color:#777;text-align:center;font-size:11px;padding:25px 10px}
+@media(min-width:650px){main{padding-top:26px}.hero{padding:28px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><div class="logo">S</div><div>SNEAKY TWEAKS<div class="small">PS5 RESPONSE OPTIMIZER</div></div></div></header>
+<nav aria-label="Main sections">
+<button class="active" data-tab="home">Home</button><button data-tab="optimizer">Optimizer</button><button data-tab="controller">Controller</button><button data-tab="fortnite">Fortnite</button><button data-tab="keyboard">Keyboard</button><button data-tab="monitor">Monitor</button><button data-tab="network">Network</button><button data-tab="ps5">PS5</button>
+</nav>
+<main>
+<section id="home" class="page active">
+<div class="hero"><div class="eyebrow">Your gaming setup companion</div><h1>Make every input count.</h1><p class="muted">A practical place to review your PS5, controller, display and game settings to reduce avoidable delay.</p><span class="pill">Original PS5 · DualSense Edge</span></div>
+<div class="grid">
+<div class="card"><div class="small">BUILD SENSITIVITY</div><div class="stat">2.1×</div></div><div class="card"><div class="small">EDIT SENSITIVITY</div><div class="stat">2.4×</div></div><div class="card"><div class="small">LOOK SENSITIVITY</div><div class="stat">42 / 42</div></div><div class="card"><div class="small">ADS SENSITIVITY</div><div class="stat">12 / 12</div></div>
+</div>
+<div class="card"><h2>Start here</h2><p class="muted">Choose a section above. Your settings can be reviewed here first; apply changes manually on your PS5 when you're ready.</p><div class="notice">This is a companion guide, not a PS5 system tweak tool. A website cannot directly change console firmware, hardware or hidden performance settings.</div></div>
+</section>
+<section id="optimizer" class="page">
+<div class="eyebrow">Setup scanner · guided checklist</div><h1>Optimizer</h1><p class="muted">Work through these checks when you're ready. Tick each one after checking it on your setup.</p>
+<div class="card"><h3>Core responsiveness checklist</h3>
+<label><input type="checkbox" class="check"> Controller connected by USB and communication method checked</label>
+<label><input type="checkbox" class="check"> TV or monitor Game Mode enabled</label>
+<label><input type="checkbox" class="check"> Display set to its supported refresh rate</label>
+<label><input type="checkbox" class="check"> Game set to Performance mode where available</label>
+<label><input type="checkbox" class="check"> Unneeded downloads paused during online play</label>
+<label><input type="checkbox" class="check"> Network connection tested</label>
+<p class="small" id="progress">0 of 6 checks complete</p></div>
+<div class="card"><h3>What this optimizer can do</h3><ul><li>Explain supported settings and their trade-offs.</li><li>Keep your game profiles and checklist together in this browser session.</li><li>Help distinguish controller delay, display delay and online lag.</li></ul></div>
+</section>
+<section id="controller" class="page">
+<div class="eyebrow">DualSense Edge</div><h1>Controller</h1><p class="muted">Your current profile, based on the values you gave me.</p>
+<div class="card"><h3>Fortnite controller profile</h3>
+<div class="range"><span>Build multiplier</span><strong>2.1×</strong></div><div class="range"><span>Edit multiplier</span><strong>2.4×</strong></div><div class="range"><span>Edit hold time</span><strong>0.100 s</strong></div><div class="range"><span>Look horizontal / vertical</span><strong>42 / 42</strong></div><div class="range"><span>ADS horizontal / vertical</span><strong>12 / 12</strong></div><div class="range"><span>Stick deadzones</span><strong>5% / 5%</strong></div><div class="range"><span>Trigger values you mentioned</span><strong>5 / 5*</strong></div><p class="small">*Trigger setting type still needs confirming.</p></div>
+<div class="card"><h3>Responsiveness tips</h3><ul><li>Try USB connection if you prefer a wired setup; compare feel in the same game.</li><li>Keep vibration off if you prefer less controller feedback.</li><li>Choose a stick response curve that feels controllable, not just the fastest.</li><li>Very low deadzones can make small stick movements more noticeable; raise them if the aim feels unstable.</li></ul></div>
+</section>
+<section id="fortnite" class="page">
+<div class="eyebrow">Competitive profile</div><h1>Fortnite</h1>
+<div class="card"><h3>Edit consistency</h3><p class="muted">Use a repeatable edit and confirm layout, then practise the same sequence in Creative. The goal is consistent inputs rather than an unrealistic promise of instant edits.</p><ul><li>Review build and edit multipliers.</li><li>Check edit and confirm binds are comfortable.</li><li>Keep confirm/reset actions easy to reach.</li><li>Use the same settings for several sessions before judging them.</li></ul></div>
+<div class="card"><h3>Your saved-in-this-file values</h3><div class="range"><span>Build / Edit</span><strong>2.1× / 2.4×</strong></div><div class="range"><span>Hold to edit</span><strong>0.100 s</strong></div></div>
+</section>
+<section id="keyboard" class="page">
+<div class="eyebrow">Keyboard setup</div><h1>Keyboard</h1><div class="card"><h3>Compatibility and feel</h3><p class="muted">Check whether your game supports keyboard and mouse on PS5. Keyboard software features configured on a PC may not transfer to the console.</p><ul><li>Use a stable USB connection where supported.</li><li>Choose keybinds that are comfortable and easy to repeat.</li><li>Do not assume a keyboard's advertised polling rate is used by every PS5 game.</li></ul></div>
+</section>
+<section id="monitor" class="page">
+<div class="eyebrow">Display response · personalised setup</div><h1>Monitor</h1>
+<div class="card"><h3>Find your best supported resolution</h3>
+<p class="muted">Choose the highest resolution your screen and PS5 both support. This page cannot detect your monitor automatically, so check the PS5 Video Output Information or your screen's manual.</p>
+<label for="resolutionSupport">What is the highest resolution your display supports?</label>
+<select id="resolutionSupport"><option value="1440">1440p or 4K</option><option value="1080">1080p only</option><option value="720">720p only</option></select>
+<div class="notice" id="resolutionAdvice" aria-live="polite">Recommended: select 1440p on the PS5 if 1440p is shown as supported. If 4K is supported and preferred, you can select 2160p instead.</div>
+<p class="small">If 1440p is not supported, choose 1080p. If 1080p is not supported, choose 720p. Do not choose a mode marked unsupported.</p>
+</div>
+<div class="card"><h3>Refresh rate</h3>
+<label for="refreshSupport">What refresh rate does your display support?</label>
+<select id="refreshSupport"><option value="120">120Hz</option><option value="60">60Hz</option><option value="unknown">Not sure</option></select>
+<div class="notice" id="refreshAdvice" aria-live="polite">If your screen and game support 120Hz, enable 120Hz output on the PS5. Otherwise use the highest supported refresh rate.</div>
+</div>
+<div class="card"><h3>Reduce display processing delay</h3><ul><li>Enable Game Mode or the monitor's low-latency mode.</li><li>Disable extra picture processing if it adds delay.</li><li>Use a suitable HDMI input and cable for the display's supported features.</li></ul><p class="notice">The highest resolution is not automatically the lowest-latency option in every game. A game's performance mode and supported frame rate also matter.</p></div>
+</section>
+<section id="network" class="page">
+<div class="eyebrow">Online connection</div><h1>Network</h1><div class="card"><h3>Reduce avoidable online lag</h3><ul><li>Use Ethernet if practical; otherwise use a strong Wi‑Fi signal.</li><li>Pause large downloads and uploads while playing.</li><li>Run the PS5 connection test and note download, upload and NAT results.</li><li>Remember: ping and server distance affect online response, not local controller input delay.</li></ul></div>
+</section>
+<section id="ps5" class="page">
+<div class="eyebrow">Console settings</div><h1>PS5</h1><div class="card"><h3>Supported system checks</h3><ul><li>Settings → Screen and Video → Video Output: review resolution, 120 Hz output and VRR where supported.</li><li>Settings → Accessories → Controller: review available controller options.</li><li>Keep system software and games updated.</li><li>Use each game's own performance or graphics mode when available.</li></ul><div class="notice">No app can safely unlock hidden FPS, overclock the PS5 or rewrite its firmware through a normal website.</div></div>
+</section>
+<footer>SNEAKY TWEAKS · Companion prototype · No direct PS5 connection</footer>
+</main>
+<script>
+const buttons=[...document.querySelectorAll('nav button')],pages=[...document.querySelectorAll('.page')];
+function show(id){pages.forEach(p=>p.classList.toggle('active',p.id===id));buttons.forEach(b=>b.classList.toggle('active',b.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'});}
+buttons.forEach(b=>b.addEventListener('click',()=>show(b.dataset.tab)));
+const checks=[...document.querySelectorAll('.check')],progress=document.getElementById('progress');
+function update(){progress.textContent=checks.filter(c=>c.checked).length+' of '+checks.length+' checks complete';}
+checks.forEach(c=>c.addEventListener('change',update));
+const resolutionSupport=document.getElementById('resolutionSupport');
+const resolutionAdvice=document.getElementById('resolutionAdvice');
+resolutionSupport.addEventListener('change',()=>{
+  const v=resolutionSupport.value;
+  resolutionAdvice.textContent = v==='1440'
+    ? 'Recommended: select 1440p on the PS5 if it is listed as supported. If your display also supports 4K and you want 4K, you can select 2160p.'
+    : v==='1080'
+    ? '1440p is not supported by this display. Select 1080p on the PS5 as the next best supported option.'
+    : 'Neither 1440p nor 1080p is supported. Select 720p, the highest supported option you selected.';
+});
+const refreshSupport=document.getElementById('refreshSupport');
+const refreshAdvice=document.getElementById('refreshAdvice');
+refreshSupport.addEventListener('change',()=>{
+  const v=refreshSupport.value;
+  refreshAdvice.textContent = v==='120'
+    ? 'Your display supports 120Hz. Enable 120Hz Output on the PS5 and use a game mode that supports it.'
+    : v==='60'
+    ? 'Your display supports up to 60Hz. Use 60Hz; selecting 120Hz will not make this display run at 120Hz.'
+    : 'Check your display specifications or the PS5 Screen and Video information. Use the highest refresh rate both support.';
+});
+</script>
+</body></html>
